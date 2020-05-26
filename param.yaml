@@ -1,0 +1,50 @@
+parameters:
+- description: The name assigned to all of the frontend objects defined in this template.
+  displayName: Database Image
+  name: DATABASE_IMAGE
+  required: true
+  value: "registry.access.redhat.com/rhscl/mysql-57-rhel7"
+- description: The OpenShift Namespace where the ImageStream resides.
+  displayName: Back End Repo
+  name: BACK_END_REPO
+  required: true
+  value: "https://github.com/blockchain101/DO288-apps"
+- description: Version of NodeJS image to be used (6, 8, or latest).
+  displayName: Backend context dir
+  name: BACK_END_CTXDIR
+  required: true
+  value: "todo-backend"
+- description: Version of MongoDB image to be used (3.6 or latest).
+  displayName: Back end branch
+  name: BACK_END_BRANCH
+  required: true
+  value: "master"
+- description: Maximum amount of memory the Node.js container can use.
+  displayName: NPM proxy
+  name: NPM_PROXY
+  required: true
+  value: "http://nexus-common.apps.ocp-ap3.prod.nextcle.com/repository/nodejs"
+- description: Maximum amount of memory the MongoDB container can use.
+  displayName: Secret
+  from: '[a-zA-Z0-9]{40}'
+  generate: expression
+  name: SECRET 
+  required: true
+- description: The URL of the repository with your application source code.
+  displayName: Password
+  name: PASSWORD
+  required: true
+- description: The URL of the repository with your application source code.
+  displayName: Hostname
+  name: HOSTNAME
+  required: true
+- description: The URL of the repository with your application source code.
+  displayName: Backend
+  name: BACKEND
+  required: true
+- description: Set this to a branch name, tag or other ref of your repository if you
+    are not using the default branch.
+  displayName: Clean database
+  name: CLEAN_DATABASE 
+  required: true
+  value: "false"

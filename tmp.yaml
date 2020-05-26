@@ -1,0 +1,9 @@
+apiVersion: v1
+data:
+  q: YWFh
+kind: Secret
+metadata:
+  creationTimestamp: null
+  name: a
+  selfLink: /api/v1/namespaces/zhuangpeng0514-review-multicontainer/secrets/a
+type: Opaque
