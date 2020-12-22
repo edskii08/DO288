@@ -8,7 +8,7 @@
         "source": {
             "type": "Git",
             "git": {
-                "uri": "https://github.com/blockchain101/DO288-apps.git",
+                "uri": "https://github.com/edskii08/DO288-apps.git",
                 "ref": "custom-pipeline"
             },
             "contextDir": "books"
